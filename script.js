@@ -10,9 +10,12 @@ function clearDisplay(){
 
 function calculate(){
     try{
-            display.value == EvalError(display.value);
+        display.value = eval(display.value);
     }
     catch(eror){
-        display.valueb = "eror";
+        display.value = "eror";
     }
+}
+function deleteLast() {
+    display.value = display.value.slice(0, -1);
 }
